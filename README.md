@@ -73,23 +73,34 @@ const filteredShoes = SHOES_DATA.filter((shoe) => {
 
 ## 3. Log Prompt AI
 
-5.	Log Prompt AI
 Berikut rekaman proses diskusi dengan Claude (Anthropic) dalam membangun proyek ini, disusun per tahap agar terlihat alur pemahaman dari awal hingga akhir — bukan sekadar satu kali perintah jadi.
-5.1	Tahap Pemahaman Materi
-Diawali dengan mengunggah file slide Pertemuan 3 dan meminta penjelasan isinya, untuk memastikan saya paham dulu konsep useState, event handling, dan component modularization sebelum masuk ke praktik.
-●	Prompt: “Summarize this attached file” — meminta ringkasan isi slide (State, Event Handling, Props, Component Modularization) sebagai dasar sebelum menentukan proyek.
-●	Prompt: (memilih opsi) “2 dan 4” — menindaklanjuti dengan meminta rincian syarat tugas take-home (Slide 23) dan sekaligus meminta dibuatkan proyeknya, setelah memahami apa saja yang wajib ada (minimal 3 komponen modular, state di parent, props + event callback, dan laporan README.md).
-5.2	Tahap Perencanaan & Penentuan Tema
+
+### 3.1 Tahap Pemahaman Materi
+
+Diawali dengan mengunggah file slide Pertemuan 3 dan meminta penjelasan isinya, untuk memastikan saya paham dulu konsep `useState`, event handling, dan component modularization sebelum masuk ke praktik.
+
+- Prompt: *"Summarize this attached file"* — meminta ringkasan isi slide (State, Event Handling, Props, Component Modularization) sebagai dasar sebelum menentukan proyek.
+- Prompt: (memilih opsi) *"2 dan 4"* — menindaklanjuti dengan meminta rincian syarat tugas take-home (Slide 23) dan sekaligus meminta dibuatkan proyeknya, setelah memahami apa saja yang wajib ada (minimal 3 komponen modular, state di parent, props + event callback, dan laporan README.md).
+
+### 3.2 Tahap Perencanaan & Penentuan Tema
+
 Sebelum kode ditulis, didiskusikan dulu tema mana yang paling representatif untuk konsep di slide (Spotify Playlist / Sneaker Store / Game Catalog), lalu dicocokkan dengan contoh live code di slide 11–12 yang sudah punya kerangka search + filter.
-●	Prompt: “yang kamu sarankan saja tapi tetap sesuai yang di minta docs” — menyetujui usulan tema Sneaker Store dengan syarat strukturnya tetap mengikuti ketentuan resmi di slide (folder src/components/, state di App.jsx, props + event callback), bukan asal ambil saran AI tanpa verifikasi ke dokumen tugas.
-5.3	Tahap Eksekusi & Debugging
+
+- Prompt: *"yang kamu sarankan saja tapi tetap sesuai yang di minta docs"* — menyetujui usulan tema Sneaker Store dengan syarat strukturnya tetap mengikuti ketentuan resmi di slide (folder `src/components/`, state di `App.jsx`, props + event callback), bukan asal ambil saran AI tanpa verifikasi ke dokumen tugas.
+
+### 3.3 Tahap Eksekusi & Debugging
+
 Setelah proyek diterima, saya mencoba menjalankannya sendiri di komputer lokal (Windows) dan menemukan dua error saat proses instalasi — keduanya didiskusikan satu per satu untuk dipahami akar masalahnya, bukan hanya menyalin solusi.
-●	Prompt (melaporkan error): “npm : File ...npm.ps1 cannot be loaded because running scripts is disabled on this system” — mendiskusikan penyebab (kebijakan Execution Policy PowerShell di Windows) dan dua opsi solusinya (pakai Command Prompt, atau mengubah ExecutionPolicy).
-●	Prompt (melaporkan error lanjutan): “npm error ENOENT ... Could not read package.json” setelah menjalankan Set-ExecutionPolicy — mendiskusikan penyebab (struktur folder hasil ekstrak ZIP menjadi bersarang / nested folder) dan cara memverifikasinya dengan perintah dir sebelum pindah folder yang benar.
-●	Prompt: “kira kira udah semua aman ni?” — meminta cara memverifikasi proyek berjalan dengan benar (ciri-ciri output npm run dev yang sukses dan tampilan yang seharusnya muncul di browser).
-5.4	Tahap Pelaporan
+
+- Prompt (melaporkan error): *"npm : File ...npm.ps1 cannot be loaded because running scripts is disabled on this system"* — mendiskusikan penyebab (kebijakan Execution Policy PowerShell di Windows) dan dua opsi solusinya (pakai Command Prompt, atau mengubah ExecutionPolicy).
+- Prompt (melaporkan error lanjutan): *"npm error ENOENT ... Could not read package.json"* setelah menjalankan `Set-ExecutionPolicy` — mendiskusikan penyebab (struktur folder hasil ekstrak ZIP menjadi bersarang / nested folder) dan cara memverifikasinya dengan perintah `dir` sebelum pindah folder yang benar.
+- Prompt: *"kira kira udah semua aman ni?"* — meminta cara memverifikasi proyek berjalan dengan benar (ciri-ciri output `npm run dev` yang sukses dan tampilan yang seharusnya muncul di browser).
+
+### 3.4 Tahap Pelaporan
+
 Tahap terakhir berfokus pada penyusunan laporan Code Defense itu sendiri, termasuk mendiskusikan kelengkapan strukturnya sebelum dibuat.
-●	Prompt: “sekarang saya butuh buat laporan nya kira kira ada tidak daftar isinya?” — mengevaluasi dulu apakah draf sebelumnya sudah memenuhi format laporan formal (cover, daftar isi) sebelum meminta dibuatkan versi resminya.
+
+- Prompt: *"sekarang saya butuh buat laporan nya kira kira ada tidak daftar isinya?"* — mengevaluasi dulu apakah draf sebelumnya sudah memenuhi format laporan formal (cover, daftar isi) sebelum meminta dibuatkan versi resminya.
 
 ---
 
